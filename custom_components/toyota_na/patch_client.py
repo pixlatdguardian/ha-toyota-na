@@ -56,7 +56,7 @@ async def get_telemetry(self, vin, region="US", generation="17CYPLUS"):
 async def _auth_headers(self):
     return {
         "AUTHORIZATION": "Bearer " + await self.auth.get_access_token(),
-        "X-API-KEY": self.API_KEY,
+        "X-API-KEY": RESOLVER_API_KEY,
         "X-GUID": await self.auth.get_guid(),
         "X-CHANNEL": "ONEAPP",
         "X-BRAND": "T",
